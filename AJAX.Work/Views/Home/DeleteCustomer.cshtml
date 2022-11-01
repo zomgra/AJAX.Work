@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<Customer>
 <p>Delete Customer</p>
 <form method="post" asp-action="OnDeleteCustomer" data-ajax-confirm="Вы действительно хотите удалить?" data-ajax="true" data-ajax-loading="#loading" data-ajax-update="#deleteResult" data-ajax-mode="replace">
-    @*@Html.AntiForgeryToken()*@
+    
     <div id="deleteResult">
         @Html.Partial("_InteractCustomers", Model)
     </div>

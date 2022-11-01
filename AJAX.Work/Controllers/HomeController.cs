@@ -18,8 +18,6 @@ namespace AJAX.Work.Controllers
         public IActionResult Index()
         {
             return View();
-            
-            //return PartialView("_CustomersInfo", new Customer { Age = 11, Name = "Vasya", SecondName = "Pupkin"});
         }
         public IActionResult Find()
         {
