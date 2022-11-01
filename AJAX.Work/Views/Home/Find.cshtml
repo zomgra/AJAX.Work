@@ -1,0 +1,12 @@
+﻿@model List<Customer>
+
+<div>
+    <form asp-action="OnFindCustomers" method="post" asp-controller="Home" id="customerForm" data-ajax-mode="replace" data-ajax-result="findResult" data-ajax="true" data-ajax-update="#findResult">
+
+        @Html.AntiForgeryToken()
+        <input type="text" name="findText"/>
+        <button type="submit">Find</button>
+    </form>
+</div>
+
+<div id="findResult"></div>

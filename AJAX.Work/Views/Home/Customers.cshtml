@@ -1,0 +1,17 @@
+﻿@model Tuple<List<Customer>, Customer>
+
+<form asp-action="OnSelectCustomer" method="post" asp-controller="Home" id="customerForm" data-ajax-mode="replace" data-ajax-result="customerResult" data-ajax="true" data-ajax-update="#customerResult">
+   
+    @Html.AntiForgeryToken()
+    @foreach (var item in Model.Item1)
+    {
+        @Html.RadioButton("id", item.Id, item == Model.Item2)
+        @Html.Label(item.Name)
+        <br />
+    }
+    <button type="submit">Get Info</button>
+</form>
+
+<div id="customerResult">
+    
+</div>

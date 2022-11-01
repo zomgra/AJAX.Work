@@ -1,0 +1,8 @@
+﻿@model IEnumerable<Customer>
+<div>
+    <h4>Time now: @DateTime.Now</h4>
+    @foreach(var custom in Model)
+    {
+        @Html.Partial("_CustomersInfo", custom)
+    }
+</div>

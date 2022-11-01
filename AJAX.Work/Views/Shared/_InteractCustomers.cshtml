@@ -1,0 +1,10 @@
+﻿@model IEnumerable<Customer>
+<div>
+    <h4>Time now: @DateTime.Now</h4>
+    @foreach (var custom in Model)
+    {
+        <h4>@custom.Name</h4>
+        <button type="submit" value="@custom.Id" name="id">Interact</button>
+        <br />   
+    }
+</div>
